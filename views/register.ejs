@@ -1,0 +1,25 @@
+<%- include('partials/header', { title: 'Register' }) %>
+
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Intern / Volunteer Registration</h2>
+  <form action="/register" method="POST">
+    <div class="mb-3">
+      <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+    </div>
+    <div class="mb-3">
+      <input type="email" name="email" class="form-control" placeholder="Email" required>
+    </div>
+    <div class="mb-3">
+      <input type="text" name="phone" class="form-control" placeholder="Phone Number" required>
+    </div>
+    <div class="mb-3">
+      <input type="text" name="college" class="form-control" placeholder="College/Institute" required>
+    </div>
+    <div class="mb-3">
+      <textarea name="reason" class="form-control" placeholder="Why do you want to join?" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Submit Application</button>
+  </form>
+</div>
+
+<%- include('partials/footer') %>
