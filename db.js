@@ -1,8 +1,12 @@
-const { Pool } = require("pg");
+// db.js
+import pg from 'pg';
+const { Pool } = pg;
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
-    rejectUnauthorized: false, // Important for Railway SSL
-  },
+    rejectUnauthorized: false
+  }
 });
+
+export { pool };
